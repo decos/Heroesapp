@@ -1,0 +1,67 @@
+SECCION 11 - APLICACION #6 Uso del HTTP - CRUD - Firebase
+
+	INICIO DEL PROYECTO - CRUD -FIREBASE
+
+		Recursos:
+			- https://firebase.google.com/?hl=es-419
+
+		1. Ejecutar los siguientes comandos
+			- ng new heroesapp
+
+		FIREBASE:
+		- La consola es como el dashboard, manejador de firebase
+
+		1. Ir a la pagina web oficial de firebase
+
+		2. Hacer clic en la opcion "Go to console"
+
+		3. Hacer clic en la opcion "Agregar Proyecto"
+
+		4. Ingresar lo siguiente:
+			- Nombre del proyecto: heroesapp
+			- Id del proyecto: heroesapp-64741 (por defecto)
+			- Pais: Peru
+	
+		5- Despues de que se genere el proyecto, ingresar a DATABASE
+
+		- Mensaje: "De acuerdo con las reglas de seguridad predeterminadas, 
+			los usuarios se deben autenticar"
+		
+		6. Hacer clic en IGNORAR (mensaje anterior)
+
+		7. Configurar en las reglas para que todo el mundo pueda leer y escribir
+
+			{
+			  "rules": {
+			    ".read": true,
+			    ".write": true
+			  }
+			}
+
+		- Hacer clic en IGNORAR el mensaje
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

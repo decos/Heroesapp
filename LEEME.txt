@@ -41,10 +41,27 @@ SECCION 11 - APLICACION #6 Uso del HTTP - CRUD - Firebase
 		- Hacer clic en IGNORAR el mensaje
 
 		
+	CREANDO LOS COMPONENTES Y RUTAS DE LA APLICACIÓN
 
+		1. Crear el directorio *components dentro del directorio *app
 
+		2. Crear el componente *heroes
+			- ng g c components/heroes -is
+		
+		3. Crear el componente *heroe
+			- ng g c components/heroes/heroe -is --flat
 
+		4. Crear el archivo de rutas
 
+		5. Añadir el selector a la vista principal de la aplicación
+
+		6. Importar las rutas al modulo principal 
+			- import { APP_ROUTING } from './app.routes';
+	
+		7. Para trabajar con el modulo HTTP, es necesario importalo	
+			al modulo principal
+			- import { HttpModule } from '@angular/http';
+			
 
 
 

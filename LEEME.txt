@@ -74,15 +74,41 @@ SECCION 11 - APLICACION #6 Uso del HTTP - CRUD - Firebase
 		4. Agregar "animated fadeIn fast" en la vista de *heroes y *heroe
 		
 
+	CREANDO EL SERVICIO HEROES - CONTROL DEL INSERT, DELETE, UPDATE Y SELECT
 
+		1. Añadir al formulario *heroes lo siguiente
+			- (ngSubmit)="guardar()" #forma="ngForm
 
+		2. Importar la clase *FormsModule al componente principal
+			- import { FormsModule } from '@angular/forms';
 
+		3. Importar la clase *NgForm al componente  *heroe
+			- import {NgForm} from '@angular/forms';
 
+		4. Al usar NgForm, creamos un objeto que nos permita setear datos rapidamente
+			y a la vez nos permita setea esa informacion
 
+		5. Crear una interface llamada *heroe en el directorio *interfaces
 
+		- Importar la interfaz creada y asignarla al objeto creado en el componente
+			*heroe
 
+		6. Crear el directorio *services y crear un servicio usando angular CLI
+			- ng g s services/heroes
 
+		- Mensaje: WARNING Service is generated but not provided, it must be provided
+			to be used
+		
+		- Solucion: Importarlo en el modulo PRINCIPAL
+			- import { HeroesService } from './services/heroes.service';
+		 
 
+		DOCUMENTACIÓN DE FIREBASE (REST)
+			- https://firebase.google.com/docs/reference/rest/database/?authuser=0
+
+		7. Añadir los *ngModel en la vista de los componentes *heroe
+		
+		
 
 
 

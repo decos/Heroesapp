@@ -61,8 +61,18 @@ SECCION 11 - APLICACION #6 Uso del HTTP - CRUD - Firebase
 		7. Para trabajar con el modulo HTTP, es necesario importalo	
 			al modulo principal
 			- import { HttpModule } from '@angular/http';
-			
 
+	
+	ESTILOS DE LOS COMPONENTES Y FORMULARIO DE EDICIÓN
+
+		1. Agregar el Bootstrap CDN al index principal de la app
+
+		2. Codear la vista del componente *heroes
+
+		3. Codear la vista del componente *heroe
+			
+		4. Agregar "animated fadeIn fast" en la vista de *heroes y *heroe
+		
 
 
 

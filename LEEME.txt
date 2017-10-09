@@ -109,11 +109,56 @@ SECCION 11 - APLICACION #6 Uso del HTTP - CRUD - Firebase
 		7. Añadir los *ngModel en la vista de los componentes *heroe
 		
 		
+	HTTTP-POST - CREANDO UN NUEVO REGISTRO EN FIREBASE
+
+		RECURSOS:
+		- https://console.firebase.google.com/project/heroesapp-64741/database/data/
+		- https://heroesapp-64741.firebaseio.com/heroes.json
+		- https://heroesapp-64741.firebaseio.com/heroes/1.json
+	
+		
+		1. Para poder hacer peticiones HTTP deberas importar lo siguiente al servicio
+			*Heroes e inyectarlo en el constructor
+			- import { Http, Headers } from "@angular/http";
+
+
+		2. Crear una variable llamada *heroesURL que tenga como valor la URL de
+			firebase la cual me permitira hacer inserciones, eliminar, etc
+			- heroesURL = "https://heroesapp-64741.firebaseio.com/heroes.json"
+
+		3. Importar la interfaz *Heroe
+			- import { Heroe } from '../interfaces/heroe.interface';
+
+		- Tener en cuenta que para hacer POST debemos enviar un String
+
+		4. Codear la funcion *nuevoHeroe
+
+		5. Usar el servicio *nuevoHeroe en el componente *Heroe
+		
+		- Importar el servicio al componente e inyectarlo en el constructor
+			import { HeroesService } from '../../services/heroes.service';
+
+		- Para que se dispare debes suscribirte
+
+		- Un POST correctamente hecho devolvera algo como lo siguiente:
+			{ "name": "-INOQPH-aV_psbk3ZXEX" }
+			
+		
+		
+		
+		
 
 
 
 
 
+
+
+
+
+
+
+ 
 
 
 

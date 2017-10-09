@@ -3,6 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 //Import interface
 import { Heroe } from '../../interfaces/heroe.interface';
+//Import Service
+import { HeroesService } from '../../services/heroes.service';
+//Import Router
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-heroe',
@@ -18,9 +22,21 @@ export class HeroeComponent implements OnInit {
     //Key, no lo tengo, no tengo manera de saberlo
   }
 
-  constructor() { }
+  constructor(private _heroesService:HeroesService,
+              private router:Router) { }
 
   ngOnInit() {
+  }
+
+  guardar(){
+    console.log(this.heroe);
+
+    //Para que se dispare, debes suscribirte
+    this._heroesService.nuevoHeroe(this.heroe)
+      .subscribe( data =>{
+          this.router.navigate(['/heroe', data.name])
+      },
+                  error => console.error(error));
   }
 
 }

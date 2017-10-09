@@ -136,13 +136,19 @@ SECCION 11 - APLICACION #6 Uso del HTTP - CRUD - Firebase
 		5. Usar el servicio *nuevoHeroe en el componente *Heroe
 		
 		- Importar el servicio al componente e inyectarlo en el constructor
-			import { HeroesService } from '../../services/heroes.service';
+			- import { HeroesService } from '../../services/heroes.service';
 
 		- Para que se dispare debes suscribirte
 
 		- Un POST correctamente hecho devolvera algo como lo siguiente:
-			{ "name": "-INOQPH-aV_psbk3ZXEX" }
-			
+			- { "name": "-INOQPH-aV_psbk3ZXEX" } (id del nodo)
+
+		- Importamos el Router para navegar a un lugar distinto al actual e
+			inyectarlo en el constructor
+			- import { Router } from '@angular/router';
+		
+		
+	
 		
 		
 		

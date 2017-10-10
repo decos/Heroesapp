@@ -109,7 +109,7 @@ SECCION 11 - APLICACION #6 Uso del HTTP - CRUD - Firebase
 		7. Añadir los *ngModel en la vista de los componentes *heroe
 		
 		
-	HTTTP-POST - CREANDO UN NUEVO REGISTRO EN FIREBASE
+	HTTP-POST - CREANDO UN NUEVO REGISTRO EN FIREBASE
 
 		RECURSOS:
 		- https://console.firebase.google.com/project/heroesapp-64741/database/data/
@@ -148,10 +148,25 @@ SECCION 11 - APLICACION #6 Uso del HTTP - CRUD - Firebase
 			- import { Router } from '@angular/router';
 		
 		
-	
+	HTTP - PUT - ACTUALIZAR EL REGISTRO
+
+		- Para firebase la actualizacion se debe hacer con un servicio PUT
+		- La data se debe enviar en forma de String
+
+		1. Crear el servicio *actualizarHeroe 
+
+		- Crear la variable *heroeURL
 		
+
+		2. En el componente *heroe crear una variable de tipo boolean llamada *nuevo
+
+		3. Importar al componente *heroe la clase *ActivateRoute para trabajar
+			con los parametros e inyectarlo en el costructor
+
+		4. Modificar el metodo *guardar del componente *heroe
 		
-		
+		- Una insercion correcta
+		- Una actualizacion correcta regresa el objeto
 		
 
 

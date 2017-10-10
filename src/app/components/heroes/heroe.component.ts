@@ -6,7 +6,7 @@ import { Heroe } from '../../interfaces/heroe.interface';
 //Import Service
 import { HeroesService } from '../../services/heroes.service';
 //Import Router
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-heroe',
@@ -22,8 +22,19 @@ export class HeroeComponent implements OnInit {
     //Key, no lo tengo, no tengo manera de saberlo
   }
 
+  nuevo:boolean = false;
+  id:string; //Inicializada
+
   constructor(private _heroesService:HeroesService,
-              private router:Router) { }
+              private router:Router,
+              private route:ActivatedRoute) {
+                this.route.params.subscribe( parametros =>{
+                  console.log(parametros)
+                  this.id = parametros['id'];
+                })
+                //Si solo fuese una instruccion
+                //this.route.params.subscribe( parametros => this.id=parametros['id']);
+  }
 
   ngOnInit() {
   }
@@ -31,12 +42,24 @@ export class HeroeComponent implements OnInit {
   guardar(){
     console.log(this.heroe);
 
-    //Para que se dispare, debes suscribirte
-    this._heroesService.nuevoHeroe(this.heroe)
-      .subscribe( data =>{
-          this.router.navigate(['/heroe', data.name])
-      },
-                  error => console.error(error));
+    if( this.id == "nuevo"){
+      //INSERTANDO
+      //Para que se dispare, debes suscribirte
+      this._heroesService.nuevoHeroe(this.heroe)
+        .subscribe( data =>{
+            this.router.navigate(['/heroe', data.name])
+        },
+                    error => console.error(error));
+    }else{
+      //ACTUALIZANDO
+      this._heroesService.actualizarHeroe(this.heroe, this.id)
+        .subscribe( data =>{
+            console.log(data);
+        },
+                    error => console.error(error));
+    }
+
+
   }
 
 }

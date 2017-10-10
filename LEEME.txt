@@ -149,6 +149,10 @@ SECCION 11 - APLICACION #6 Uso del HTTP - CRUD - Firebase
 		
 		
 	HTTP - PUT - ACTUALIZAR EL REGISTRO
+		
+		RECURSOS:
+			- https://console.firebase.google.com/project/heroesapp-64741/database/data/heroes
+			- https://firebase.google.com/docs/reference/rest/database/?authuser=0#section-post (PUT)
 
 		- Para firebase la actualizacion se debe hacer con un servicio PUT
 		- La data se debe enviar en forma de String

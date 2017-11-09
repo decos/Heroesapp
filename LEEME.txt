@@ -173,6 +173,24 @@ SECCION 11 - APLICACION #6 Uso del HTTP - CRUD - Firebase
 		- Una actualizacion correcta regresa el objeto
 		
 
+	HTTP - GET - OBTENER UN NODO ESPECIFICO
+
+		RECURSOS:
+			- https://heroesapp-64741.firebaseio.com/heroes/-Kw5ve8Ji5BlyHXeJqIK.json
+			- http://localhost:4200/heroe/-Kw5ve8Ji5BlyHXeJqIK
+
+		1. Codear el servicio *getHeroe
+
+		2. Añadir el tipo de visibilidad *private al objeto *heroe con la 
+			finalidad de no confundirnos al usarlos
+
+		3. Modificar el constructor del componente *heroe para que
+			consuma el servicio *getHeroe
+
+		4. Agregar el boton "Nuevo Heroe" en la vista *heroe
+
+		5. Agregar la funcion *agregarNuevo(forma) la cual contiene la funcionalidad
+			del boton creado anteriormente
 
 
 

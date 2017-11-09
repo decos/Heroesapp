@@ -15,7 +15,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class HeroeComponent implements OnInit {
 
-  heroe:Heroe = {
+  private heroe:Heroe = {
     nombre:"",
     bio:"",
     casa:"Marvel"
@@ -29,8 +29,12 @@ export class HeroeComponent implements OnInit {
               private router:Router,
               private route:ActivatedRoute) {
                 this.route.params.subscribe( parametros =>{
-                  console.log(parametros)
+                  console.log("parametros" , parametros)
                   this.id = parametros['id'];
+                  if( this.id !== "nuevo" ){
+                    this._heroesService.getHeroe( this.id )
+                      .subscribe( heroe => this.heroe = heroe)
+                  }
                 })
                 //Si solo fuese una instruccion
                 //this.route.params.subscribe( parametros => this.id=parametros['id']);
@@ -58,8 +62,15 @@ export class HeroeComponent implements OnInit {
         },
                     error => console.error(error));
     }
+  }
 
+  agregarNuevo( forma:NgForm ){
+    //Navegar a una nueva ruta
+    this.router.navigate(['/heroe', 'nuevo']);
 
+    forma.reset({
+      casa:"Marvel"
+    });
   }
 
 }

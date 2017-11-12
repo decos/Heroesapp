@@ -211,10 +211,25 @@ SECCION 11 - APLICACION #6 Uso del HTTP - CRUD - Firebase
 		4. Añadir la funcionalidad a la vista del componente *heroes junto con el pipe.
 
 	
-	
+	HTTP - Delete para eliminar registros
 
+		1. Agregar el boton *Editar y la logica del boton en la vista del componente
+			*heroes
 
+		2. Agregar el boton *Eliminar y añadir la propiedad *click que llamara
+			la funcion *borrarHeroe(k)
 
+		3. Añadir la funcion *borrarHeroe al componente *heroes
+
+		4. Añadir el servicio *borrarHeroe
+
+		- PIPE tiene que estar pendiente del ciclo de cambios que haga angular
+
+		5. Añadir la siguiente linea al pipe *keys
+			- pure: false
+
+		6. Modificar la funcion *borrarHeroe al componente *heroes para eliminar
+			adecuadamente el heroe al momento de hacer clic en el boton *eliminar
 
 
 

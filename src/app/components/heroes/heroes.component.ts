@@ -29,14 +29,24 @@ export class HeroesComponent implements OnInit {
 
         //Crear un PIPE para trabajar esto
         this.heroes = data;
-        
-      })
 
+      })
   }
 
-
-
   ngOnInit() {
+  }
+
+  borrarHeroe( key$:string ){
+    this._heroesService.borrarHeroe(key$)
+      .subscribe( respuesta=> {
+        //console.log(respuesta);
+        if ( respuesta ){
+          console.log(respuesta);
+        } else{
+          //todo bien
+          delete this.heroes[key$];
+        }
+      })
   }
 
 }

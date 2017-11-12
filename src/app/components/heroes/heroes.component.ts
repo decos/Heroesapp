@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeroesService } from '../../services/heroes.service';
 
 @Component({
   selector: 'app-heroes',
@@ -7,7 +8,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroesComponent implements OnInit {
 
-  constructor() { }
+  heroes:any[] = [];
+
+  constructor(private _heroesService:HeroesService) {
+
+    //subscribe me devolvera la data que viene de mi servicio
+    this._heroesService.getHeroes()
+      .subscribe( data => {
+        console.log(data);
+        //Convertir un objeto en un arreglo
+        /*
+        for(let key$ in data){
+
+          let h = data[key$];
+          h.key$ = key$
+          this.heroes.push( data[key$] );
+        }
+        console.log( this.heroes );
+        */
+
+        //Crear un PIPE para trabajar esto
+        this.heroes = data;
+        
+      })
+
+  }
+
+
 
   ngOnInit() {
   }

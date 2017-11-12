@@ -193,6 +193,27 @@ SECCION 11 - APLICACION #6 Uso del HTTP - CRUD - Firebase
 			del boton creado anteriormente
 
 
+	HTTP - GET - OBTENER UN LISTADO DE TODOS LOS HÉROES
+
+		RECURSOS: 
+			- https://heroesapp-64741.firebaseio.com/heroes.json
+
+		1. Codear el servicio *getHeroes
+
+		2. Crear un pipe utilizando la consola
+			- ng g p pipes/keys
+
+		- Asegurarse que actuaalize el modulo (importaciones y declaraciones)
+			- update src/app/app.module.ts
+
+		3. Añadir la funcionalidad al constructor del componente *heroes (constructor)
+
+		4. Añadir la funcionalidad a la vista del componente *heroes junto con el pipe.
+
+	
+	
+
+
 
 
 

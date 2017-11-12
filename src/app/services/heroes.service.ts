@@ -10,8 +10,8 @@ import 'rxjs/Rx';
 @Injectable()
 export class HeroesService {
 
-  heroesURL = "https://heroesapp-64741.firebaseio.com/heroes.json"
-  heroeURL = "https://heroesapp-64741.firebaseio.com/heroes/"
+  heroesURL:string = "https://heroesapp-64741.firebaseio.com/heroes.json"
+  heroeURL:string = "https://heroesapp-64741.firebaseio.com/heroes/"
 
   constructor( private http:Http ) { }
 
@@ -56,6 +56,11 @@ export class HeroesService {
     return this.http.get( url )
       .map( res => res.json() );
 
+  }
+
+  getHeroes(){
+    return this.http.get( this.heroesURL )
+      .map( res => res.json() );
   }
 
 }

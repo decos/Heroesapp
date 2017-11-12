@@ -232,11 +232,19 @@ SECCION 11 - APLICACION #6 Uso del HTTP - CRUD - Firebase
 			adecuadamente el heroe al momento de hacer clic en el boton *eliminar
 
 
+	MAQUILLAJE PARA NUESTRA PANTALLA DE HEROES
+
+		1. Añadir la siguiente linea para que el nombre del heroes aparezca al
+			editarlo
+			- {{ heroe.nombre }}
+
+		2. Añadir un atributo *loading para mejorar la alerta agregada a la vista
+			*heroes
+
+		3. Añadir otra alerta que muestre el mensaje "Cargando...por favor espere"
 
 
-
-
-
+	
  
 
 
